@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ITMO2022_ASP.NET_FinalProject.Site" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 100%;
+
+        }
+        .auto-style4 {
+            height: 146%;
+        }
+        .auto-style5 {
+            background-color: lightgray;
+            width: 20%;
+            vertical-align: top;
+        }
+
+        .auto-style6 {
+            height: 100%;
+            background-color: midnightblue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style6" colspan="2">
+                            <h1>GradeBook</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style5">&nbsp;<div class="menu">
+                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" Orientation="Vertical" ForeColor="midnightblue" >
+                                <Items>
+                                    <asp:MenuItem  NavigateUrl="~/AddStudent.aspx" Text="ADD NEW STUDENT"/>
+                                    <asp:MenuItem  NavigateUrl="~/AddGrade.aspx" Text="ADD GRADES"/>
+                                    <asp:MenuItem  NavigateUrl="~/ViewGrades.aspx" Text="VIEW GRADES"/>
+                                    <asp:MenuItem  NavigateUrl="~/ViewTOP.aspx" Text="TOP AND BOTTOM RESULTS"/>
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                        </td>
+                        <td class="auto-style4">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                </table>
+
+        </div>
+    </form>
+</body>
+</html>

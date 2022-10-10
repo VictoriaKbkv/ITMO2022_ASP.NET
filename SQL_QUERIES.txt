@@ -1,0 +1,13 @@
+Select top 5 [dbo].[StudentGrade].[StudentID], LastName, FirstName, AVG([Grade]), Sum([Grade]) from 
+[dbo].[StudentGrade] INNER JOIN [dbo].[Student]
+	ON ([dbo].[StudentGrade].[StudentID]=[dbo].[Student].[StudentID])
+Where [Status]='Current'
+GROUP BY [dbo].[StudentGrade].[StudentID], LastName, FirstName
+Order by AVG([Grade]) desc 
+
+Select top 5 [dbo].[StudentGrade].[StudentID], LastName, FirstName, AVG([Grade]), Sum([Grade]) from 
+[dbo].[StudentGrade] INNER JOIN [dbo].[Student]
+	ON ([dbo].[StudentGrade].[StudentID]=[dbo].[Student].[StudentID])
+Where [Status]='Current'
+GROUP BY [dbo].[StudentGrade].[StudentID], LastName, FirstName
+Order by AVG([Grade]) asc 
